@@ -270,3 +270,14 @@ body {font-family: Arial, Helvetica, sans-serif;}
   left: 400px
   ;
  }
+
+ .botaoemail{
+  padding: 50px 80px;
+ }
+
+ .Título-sobre{
+  color: #C4C5BA;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+ }
