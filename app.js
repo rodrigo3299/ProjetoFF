@@ -1,21 +1,62 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+ 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3Q7bULr6E0d4aGWpSbAfzvBvyzy2wIME",
-  authDomain: "future-fast.firebaseapp.com",
-  projectId: "future-fast",
-  storageBucket: "future-fast.appspot.com",
-  messagingSenderId: "25712076210",
-  appId: "1:25712076210:web:fb5b9dce61999cd1cb70ab",
-  measurementId: "G-N7ZB9V193X"
+  apiKey: "AIzaSyCxIUeMYxFbcr43Ggfrw-jNKaP9iCnC6nw",
+  authDomain: "projetoff-f59d2.firebaseapp.com",
+  projectId: "projetoff-f59d2",
+  storageBucket: "projetoff-f59d2.appspot.com",
+  messagingSenderId: "14040077594",
+  appId: "1:14040077594:web:8bec86a2b255df89cd08a3"
 };
-
+ 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
+ 
+  const emailField = document.getElementById('email');
+  const passwordField = document.getElementById('password');
+  const loginButton = document.getElementById('loginButton');
+ 
+  loginButton.addEventListener('click', ()=>{
+    const email = emailField.value;
+    const password = passwordField.value;
+ 
+    firebase.auth().signInWithEmailAndPassword(email,password)
+    .then((userCredential)=>{
+      const user = userCredential.user;
+      console.log("Usuário logado : ", user)
+    })
+    .catch((error)=>{
+      const errorMessage = error.message;
+      console.error("Erro de autenticação : ", errorMessage)
+    });
+  });
+
+function createEmail(){
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+ 
+    firebase.auth().createUserWithEmailAndPassword(email,password)
+    .then(user =>{
+        console.log('usuario ', user);
+        alert('Usuario criado e logado');
+    }).catch(err=>{
+        console.error("Erro ao criar usuario", err );
+    });
+}
+ 
+ 
+ 
+ 
+function loginEmail(){
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+ 
+    firebase.auth().signInWithEmailAndPassword(email,password)
+    .then(()=>{
+        alert('Usuário logado');
+    })
+    .catch(err =>{
+        console.log('error', error)
+    })
+}
+ 
