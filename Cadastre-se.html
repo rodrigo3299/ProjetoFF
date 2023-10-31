@@ -14,77 +14,39 @@
         <a href="Contato.html"><i class="fa fa-fw fa-envelope"></i> Contato</a>
         <a href="Login.html"><i class="fa fa-fw fa-user"></i> Login</a>
         <a class="active" href="Cadastre-se.html"><i class="fa-diamond">Cadastre-se</i></a>
+        <a href="Termos.html"><i class="fa-diamond">Termos</i></a>
       </div>
 
-      <button class="botaologin" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Clique Aqui</button>
-    
-      <div id="id01" class="modal">
-        
-      
-  
-          <div class="container">
-  
-              <label for="psw"><b>Nome</b></label>
-              <input type="password" placeholder="Nome Completo" name="psw" required>
-  
-              <label for="psw"><b>Sobrenome</b></label>
-              <input type="password" placeholder="Esporte praticado" name="psw" required>
-  
-  
-            <label for="uname"><b>Email</b></label>
-            <input type="text" placeholder="Email" name="uname" required>
-      
-            <label for="psw"><b>Senha</b></label>
-            <input type="password" placeholder="Crie sua senha" name="psw" required>
-  
-            <label for="psw"><b>Confirmar senha</b></label>
-            <input type="password" placeholder="Confirme sua senha" name="psw" required>
-              
-            <button type="submit">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-          </div>
-      
-          <div class="container" style="background-color:#ffffff">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Guardar <a href="#">login?</a></span>
-          </div>
-        </form>
-      </div>
-      
-      <script>
-      // Get the modal
-      var modal = document.getElementById('id01');
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-          if (event.target == modal) {
-              modal.style.display = "none";
-          }
-      }
-      </script>
-      
-      </body>
-      
-      
-  <BR>
-      <BR>
-          <BR>
-              <BR>
-                  <BR>
-                      <BR>
-                          <BR>
-                              <BR>
-                                  <br>
-                                  <br>
-                                  <br>
-          <BR>
-      <p class="cntt">
-  
-          + 55 (11) 91234-6789 / +55 (11) 76567-6543 CIDADE ESPORTIVA - SP, CEP 04363-040
-  
-        </p>
+      <body>
+
+        <form action="action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+              <h1>Cadastre-se</h1>
+              <p>Complete o formulário para se cadastrar </p>
+              <hr>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Digite o Email" name="email" required>
+          
+              <label for="psw"><b>Senha</b></label>
+              <input type="password" placeholder="Digite a Senha" name="psw" required>
+          
+              <label for="psw-repeat"><b>Digite a senha novamente</b></label>
+              <input type="password" placeholder="Repita a Senha" name="psw-repeat" required>
+          
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Me lembre
+              </label>
+          
+              <p>Ao criar uma conta você concorda com os <a href="Termos.html" style="color:dodgerblue">Termos & Privacidade</a>.</p>
+          
+              <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancelar</button>
+                <button type="submit" class="signupbtn">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </body>
 
 </body>
 </html>
