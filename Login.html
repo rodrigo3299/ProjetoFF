@@ -9,14 +9,24 @@
 </head>
 <body style="background: linear-gradient(141deg, #1b1b1b 0%, #273f01 51%, #3b3b3b 75%);">
    
-   
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+
     <div class="navbar">
         <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="Sobre.html"><i class="fa fa-fw fa-search"></i> Sobre</a>
         <a href="Contato.html"><i class="fa fa-fw fa-envelope"></i> Contato</a>
         <a class="active" href="Login.html"><i class="fa fa-fw fa-user"></i> Login</a>
         <a href="Cadastre-se.html"><i class="fa-diamond">Cadastre-se</i></a>
-        <a href="Termos.html"><i class="fa-diamond">Termos</i></a>
       </div>
   <div class="container">
         <h1>Já tem uma conta? Faça login</h1>
@@ -33,6 +43,17 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
     <script src="app.js"></script>
     <script src="email.js"></script>
+
+    <hr style="color:#C4C5BA ;">
+
+    <img class="logo2-login"  src="logo2-removebg-preview.png">
+    <h3 class="projet">
+      contato
+    </h3>
+      <p class="tel">
+        + 55 (11) 96543-4682 / +55 (11) 99950-4453 RODOVIA BR-116 - KM 1 SÃO PAULO   SP - CEP 45680-000
+      </p>
+
     </body>
  
 </html>

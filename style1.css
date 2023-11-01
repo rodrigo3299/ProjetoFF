@@ -81,10 +81,10 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .logo2{
-    width: 260px;
-    text-align: center;
+    width: 150px;
+    justify-content: center;
     position: relative;
-    left: 525px;
+    left: 597px;
 }
 
 .responsive{
@@ -126,7 +126,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .navbar {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 100%;
-  background-color: #8B6212;
+  background-image: linear-gradient(to right, rgba(255, 196, 0, 0), rgb(145, 106, 0));
   overflow: auto;
 }
 
@@ -147,7 +147,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 /* Current/active navbar link */
 .active {
-  background-color: #04AA6D;
+  background-image: linear-gradient(to right, rgba(21, 102, 10, 0), rgb(0, 92, 0));
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
@@ -406,7 +406,7 @@ span.psw {
   to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
+
 @media screen and (max-width: 300px) {
   span.psw {
      display: block;
@@ -419,7 +419,7 @@ span.psw {
 
 * {box-sizing: border-box}
 
-/* Full-width input fields */
+
   input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
@@ -439,7 +439,7 @@ hr {
   margin-bottom: 25px;
 }
 
-/* Set a style for all buttons */
+
 button {
   background-color: #04AA6D;
   color: white;
@@ -527,3 +527,9 @@ justify-content: center;
 height: 150px;
 }
 
+.logo2-login{
+  width: 150px;
+  justify-content: center;
+  position: relative;
+  left: 5px;
+}
