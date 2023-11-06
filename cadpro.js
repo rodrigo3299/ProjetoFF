@@ -1,20 +1,19 @@
-
 //instalando programas
 const mongoose = require("mongoose");
 const express = require("express");
 const bodyParser = require("body-parser");
- 
+
 //configurando o roteamento para teste no postman
 const app = express();
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 const port = 3000;
- 
+
 //configurando o acesso ao mongodb
-mongoose.connect('mongodb://127.0.0.1:27017/cadpro',
-{   useNewUrlParser: true,
+mongoose.connect('mongodb://127.0.0.1:27017/cadpro', 
+{   useNewUrlParser: true, 
     useUnifiedTopology: true,
 });
- 
+
 //criando a model do seu projeto
 const UsuarioSchema = new mongoose.Schema({
     nome : {type : String},
@@ -24,9 +23,9 @@ const UsuarioSchema = new mongoose.Schema({
     cep : {type : String, required : true},
     nascimento : {type : Date, required : true}
 });
- 
+
 const Usuario = mongoose.model("Usuario", UsuarioSchema);
- 
+
 //configurando os roteamentos
 app.post("/cadastrousuario", async(req, res)=>{
     const nome = req.body.nome;
@@ -34,29 +33,42 @@ app.post("/cadastrousuario", async(req, res)=>{
     const endereco = req.body.endereco;
     const numero = req.body.numero;
     const cep  = req.body.cep;
-    const nascimento = req.body.nascimento
- 
-    const usuario = new Usuario({
+    const nascimento = req.body.nascimento;
+
+    if( nome == null || email == null || endereco == null || numero == null || cep == null || nascimento == null ){
+        return res.status(400).json({error : "Preencher todos os campos"});
+        }
+const emailExiste = await Usuario.findOne({email : email});
+
+if(emailExiste){
+ return res.status(400).json({error : "O email informado já existe"});
+}
+
+const usuario = new Usuario({
         nome : nome,
         email : email,
         endereco : endereco,
         numero : numero,
         cep : cep,
-        nascimento : nascimento
+        nascimento : nascimento,
     })
- 
+
     try{
         const newUsuario = await usuario.save();
         res.json({error : null, msg : "Cadastro ok", pessoaId : newUsuario._id});
     } catch(error){
        }
- 
+
 });
- 
+app.get("/cadastrousuario", async(req, res)=>{
+    res.sendFile(__dirname +"/cadastrousuario");
+})
+
+
 app.get("/", async(req, res)=>{
     res.sendFile(__dirname +"/bancodedados.html");
 })
- 
+
 //configurando a porta
 app.listen(port, ()=>{
     console.log(`Servidor rodando na porta ${port}`);
