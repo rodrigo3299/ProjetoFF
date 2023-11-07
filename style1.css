@@ -31,9 +31,10 @@
 }
 
 .Logo{
-  padding: 10px;
+  padding: 40px;
   position: relative;
-  left: 295px;
+  left: 275px;
+  width: 566px;
 }
 
 
@@ -518,7 +519,8 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #1b1b1b;
+  border: #000 2px;
+  background-color: #1b1b1b9c;
   padding: 20px;
 }
 

@@ -27,7 +27,7 @@ const UsuarioSchema = new mongoose.Schema({
 const Usuario = mongoose.model("Usuario", UsuarioSchema);
 
 //configurando os roteamentos
-app.post("/cadastrousuario", async(req, res)=>{
+app.post("/cadastrousuario.html", async(req, res)=>{
     const nome = req.body.nome;
     const email = req.body.email;
     const endereco = req.body.endereco;
@@ -60,8 +60,8 @@ const usuario = new Usuario({
        }
 
 });
-app.get("/cadastrousuario", async(req, res)=>{
-    res.sendFile(__dirname +"/cadastrousuario");
+app.get("/cadastrousuario.html", async(req, res)=>{
+    res.sendFile(__dirname +"/cadastrousuario.html");
 })
 
 
