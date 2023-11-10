@@ -3,34 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pessoa</title>
-
-    <!-- Inclua o CSS do Bootstrap -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body style="background: linear-gradient(141deg, #051726 0%, #273f01 51%, #192703 75%, #051726 100%);">
+<body style="background: linear-gradient(141deg, #051726 0%, #273f01 51%, #031727 75%, #051726 100%);">
 
-<!-- Barra de Navegação Bootstrap -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">ONG FLORESTA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/cadastrousuario.html">Cadastro de Pessoa</a>
-            </li>
-        </ul>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-</nav>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+
+    <div class="navbar">
+        <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="Sobre.html"><i class="fa fa-fw fa-search"></i> Sobre</a>
+        <a href="Contato.html"><i class="fa fa-fw fa-envelope"></i> Contato</a>
+        <a href="Login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+        <a class="active" href="cadastrousuario.html"><i class="fa-diamond">Cadastre-se</i></a>
+      </div>
+
+      <body>
+
+        <form action="action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+              <h1>Cadastre-se</h1>
+              <p>Complete o formulário para se cadastrar </p>
+              <hr>
+          
 
 <!-- Formulário de Cadastro de Pessoa com Bootstrap -->
 <div class="container mt-5">
-    <h1>Cadastro de Pessoa</h1>
     <form action="/cadastrousuario.html" method="post">
         <div class="form-group">
             <label for="nome">Nome:</label>

@@ -129,6 +129,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 100%;
   background-color: rgb(145, 106, 0);
   overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
 /* Navbar links */
@@ -139,6 +142,8 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   text-decoration: none;
   font-size: 17px;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
 /* Navbar links on mouse-over */
