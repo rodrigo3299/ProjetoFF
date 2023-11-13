@@ -117,13 +117,14 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: relative;
   left: 230px;
   padding: 15px;
+  color: #C4C5BA;
 }
 
 .sobre-geral{
   background-color:  #43572E;
 }
  
-/* Style the navigation bar */
+
 .navbar {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 100%;
@@ -132,6 +133,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 /* Navbar links */
@@ -542,4 +546,8 @@ height: 150px;
   justify-content: center;
   position: relative;
   left: 5px;
+}
+
+.final-floresta{
+ background-image: url(https://img.freepik.com/vetores-premium/paisagem-panoramica-densa-selva-impenetravel-pendurando-lianas-vector_532963-700.jpg?size=626&ext=jpg)
 }

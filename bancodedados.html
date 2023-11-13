@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG FLORESTA</title>
-
-    <!-- Inclua o CSS do Bootstrap -->
+    <title>Home - BSR</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
 </head>
-<body>
-
+ 
+ 
+<body style="background: linear-gradient(141deg, #051726 0%, #273f01 51%, #031727 75%, #051726 100%);">
+ 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+ 
 <!-- Barra de Navegação Bootstrap -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/">ONG FLORESTA</a>
@@ -22,20 +36,21 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="cadastrousuario.html">Cadastro do Usuario</a>
+                <a class="nav-link" href="/cadastrousuario">Cadastro do Usuario</a>
             </li>
         </ul>
     </div>
 </nav>
-
+ 
 <!-- Área Principal -->
 <div class="container mt-5">
-    <h1>Bem-vindo à Página Principal</h1>
-    <p>Esta é a página principal do meu site.</p>
+    <h1 style="color: aliceblue;" >Bem-vindo à Página Principal</h1>
+    <p style="color: aliceblue;">Esta é a página principal do meu site.</p>
 </div>
-
+ 
+ 
 </body>
-
+ 
 <!-- Inclua o JavaScript do Bootstrap e jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
