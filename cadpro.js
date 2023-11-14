@@ -43,7 +43,12 @@ const emailExiste = await Usuario.findOne({email : email});
 if(emailExiste){
  return res.status(400).json({error : "O email informado já existe"});
 }
+
+const enderecoExiste = await Usuario.findOne({endereco : endereco});
  
+if(enderecoExiste){
+ return res.status(400).json({error : "O endereço já foi registrado"});
+}
 const usuario = new Usuario({
         nome : nome,
         email : email,
